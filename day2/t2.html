@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        <output id="out"></output>
+    </h1>
+    <video autoplay id="vid" poster="images/batman1.jpg" width="550" height="400">
+        
+        <source src="media/html5.webm">
+        <source src="media/html5.mp4">
+    
+    </video> 
+    <button onclick="playvid()">Play</button>
+    <button onclick="pausevid()">Pause</button>
+    <button onclick="stopvid()">Stop</button>
+    <button onclick="revind()">Revind</button>
+    <script>
+        setInterval ( function (){
+            document.getElementById("out").value=document.getElementById("vid").currentTime
+       
+        },10)
+        
+        function playvid(){
+            document.getElementById("vid").play();
+        }
+        function pausevid(){
+            document.getElementById("vid").pause();
+        }
+        function stopvid(){
+
+            document.getElementById("vid").currentTime = 0;
+
+           document.getElementById("vid").pause();
+        }   
+        function revind(){
+            document.getElementById("vid").currentTime=document.getElementById("vid").currentTime-0.1;
+            document.getElementById("vid").pause();
+        }
+
+
+      
+
+
+        }
+
+    </script>
+
+    
+   
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Local Storage</title>
+  <script>
+    function store(){
+    var uname = document.getElementById('uname').value;
+    var umail = document.getElementById('umail').value;
+
+    const user = {
+        uname: uname,
+        umail: umail,
+    }
+
+    window.localStorage.setItem(key,JSON.stringify(user));  
+   
+}
+
+
+
+window.onload =function(){ 
+    document.getElementById("user").onsubmit = store
+  </script>
+</head>
+<body>
+  <div id="formDiv">
+        <form id="user">
+            <h1>Local Storage</h1>
+            <label for="uname" >uname</label>
+            <input type="text" id="uname" ><br>
+            <label for="umail" >umail</label>
+            <input type="mail" id="umail"><br>
+            <button type="submit">Store Records</button>
+        </form>
+        <br>
+        
+  </div>
+</body>
+</html>

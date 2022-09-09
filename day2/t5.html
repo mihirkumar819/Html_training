@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       
+        function geoSuccessFun(pos){
+           // console.log(pos.coords)
+           document.getElementById("ts").textContent=new Date(pos.timestamp);
+           document.getElementById("lat").textContent=pos.coords.latitude;
+           document.getElementById("lon").textContent=pos.coords.longitude;
+           document.getElementById("acc").textContent=pos.coords.accuracy+"mts";
+
+
+
+        }
+        function geoErrorFun(err){
+            console.log(err)
+        }
+        if(navigator.geolocation){
+           // navigator.geolocation.getCurrentPosition(geoSuccessFun,geoErrorFun)
+            navigator.geolocation.watchPosition(geoSuccessFun,geoErrorFun,{
+                enableHighAccuracy:true,
+                maximumAge:4000,
+                timeout:6000
+            })
+        }
+        else{
+            alert("geolocation is not supported | please update your browser")
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2> Time Setup <span id="ts"></span></h2>
+        <h2> Longitude <span id="lon"></span></h2>
+        <h2> Latitude <span id="lat"></span></h2>
+        <h2> Accuracy <span id="acc"></span></h2>
+    </div>
+    
+</body>
+</html>

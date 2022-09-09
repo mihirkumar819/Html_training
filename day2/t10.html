@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function storeInfo(){
+            var info = {
+                uname : document.getElementById("uname").value,
+                uage : document.getElementById("umail").value,
+                uphone : document.getElementById("uphone").value
+            };
+            // console.log("User Info ", info);
+            localStorage.setItem("user", JSON.stringify( info ));
+        };
+        function clearInfo(){
+            localStorage.clear();
+        }
+        function getKeyName(){
+            alert(localStorage.key(0));
+        }
+        function getLength(){
+            alert(localStorage.length);
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tbody>
+         <tr>
+             <th> User Name </th>
+             <td> <input id="uname" name="uname" type="text"/> </td>
+         </tr>
+         <tr>
+             <th> User eMail </th>
+             <td> <input id="umail" name="email" type="email"/> </td>
+         </tr>
+         <tr>
+             <th> User Phone </th>
+             <td> <input id="uphone"  type="tel"/> </td>
+         </tr>
+         <tr>
+             <th> &nbsp; </th>
+             <td> 
+                <input onclick="storeInfo()" type="submit" value="Store Info">
+            </td>
+         </tr>
+        </tbody>
+     </table>
+     <button onclick="clearInfo()">Clear</button>
+     <button onclick="getKeyName()">get key name</button>
+     <button onclick="getLength()">get number of stored users</button>
+</body>
+</html>

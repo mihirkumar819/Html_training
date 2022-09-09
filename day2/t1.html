@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <h1>Registration Form</h1>
+            <form action="#" method="get">
+            <tr>
+                <th>
+                    User Name
+                </th>
+                <td><input name="name" type="text"  id="uname" required placeholder="Enter your Name: Mihir"></td>
+            </tr>
+           <tr>
+                <th>
+                    User Age
+                </th>
+                <td><input  name="age" type="number" required  id="uage"  onchange="validationAge()" placeholder="eg : 45"  ></td>
+            </tr>
+        
+                <th>
+                    &nbsp;
+                </th>
+                <td ><input type="Submit" value="Register"></td>
+            </tr>
+        </tbody>
+    </form>
+    </table>
+    <script>
+       document.getElementById("uname").setCustomValidity("valtech needs to fill this section");
+        document.getElementById("uage").setCustomValidity("enter your age");
+        function validationAge(){
+            if(document.getElementById("uage").value < 18){
+                document.getElementById("uage").setCustomValidity("you are too young to join");
+            }
+           else if(document.getElementById("uage").value > 90){
+                document.getElementById("uage").setCustomValidity("you are too old to join");
+            }else{               
+                document.getElementById("uage").setCustomValidity("");
+            }        
+        }
+    </script>
+</body>
+</html>
