@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Handson</title>
+ <script>
+ function changebckcolor(source)
+ {
+ document.getElementById("box").style.background = source.value;
+//   console.log(source.value)
+ }
+        function changetextcolor(source){
+ document.getElementById("box").style.color = source.value;
+ //   console.log(source.value)
+ }
+ </script>
+</head>
+<body>
+ <!-- background color -->
+ <label for="">Background Color:&nbsp;<input type="color" oninput="changebckcolor(this)"></label> 
+ <br>
+ <label for="">Font Color : &nbsp;<input type="color" oninput="changetextcolor(this)" ></label>
+
+ <div class="container" id="box" style="background-color:'{boxbck}' ;">
+ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere modi deleniti provident cumque aperiam dolore, consequatur facilis repudiandae. Vel necessitatibus ducimus quaerat, hic tempora ab magni voluptatum architecto impedit rem!
+ Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse iure perspiciatis illum rerum voluptatibus sequi maiores alias deserunt reiciendis explicabo? Eius libero officiis ad facilis temporibus explicabo quis, voluptates alias. 
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, ullam corrupti voluptas modi eum voluptatibus molestias sapiente dolores quam cum nisi accusamus similique optio, ratione doloribus esse quo, distinctio suscipit?
+</div>
+</body>
+</html>
+

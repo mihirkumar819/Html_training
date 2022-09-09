@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function textInputHandler(source){
+
+           var ans = document.getElementById(source.type + 'op').value = source.value;
+
+        };
+        function textOutputHandler(source){
+
+            var ans1 = document.getElementById("progress").value = source.value;
+
+};
+
+    </script>
+</head>
+<body>
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Type</th>
+
+                <th>As rendered by browser </th>
+
+                <th>value entered by user</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <th>search</th>
+
+                <th><input type="search" oninput="textInputHandler(this)"></th>
+
+                <th> <output id="searchop"></output> </th>
+
+            </tr>
+
+            <tr>
+
+                <th>color</th>
+
+                <th><input type="color"></th>
+
+                <th> <output id="colorop"></output> </th>
+
+            </tr>
+
+            <tr>
+
+                <th>time</th>
+
+                <th><input type="time"></th>
+
+                <th> <output></output> </th>
+
+            </tr>
+
+            <tr>
+
+                <th>date</th>
+
+                <th><input type="date"></th>
+
+                <th> <output></output> </th>
+
+            </tr>
+            <tr>
+
+                <th>range</th>
+
+                <th><input type="range"></th>
+
+                <th> <output id="rangeop"></output> </th>
+
+            </tr>
+            <tr>
+
+                <th>url</th>
+
+                <th><input type="url"></th>
+
+                <th> <output id="urlop"></output> </th>
+
+            </tr>
+            <tr>
+
+                <th>email</th>
+
+                <th><input type="email"></th>
+
+                <th> <output id="emailop"></output> </th>
+
+            </tr>
+            <tr>
+
+                <th>Number</th>
+
+                <th><input type="number"></th>
+
+                <th> <output id="numberop"></output> </th>
+
+            </tr>
+            <tr>
+
+                <th>Progress</th>
+
+                <th><input type="range"></th>
+
+                <th> <progress id="progressop"></output> </th>
+
+            </tr>
+            <tr>
+
+                <th>Meter</th>
+
+                <th><meter low="0.1" optimum="0.4" high="0.8" value="1.8"></meter></th>
+
+
+            </tr>
+            
+    
+</body>
+</html>
