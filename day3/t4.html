@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        <output id="out"></output>
+    </h1>
+    <audio id="audi" >
+        <source src="../ringtone/ringtone.mp3">
+       
+    </audio> 
+    <button onclick="playaudi()">Play</button>
+    <button onclick="pauseaudi()">Pause</button>
+    <button onclick="stopaudi()">Stop</button>
+    <button onclick="revindaudi()">Revind</button>
+    <script>
+        setInterval ( function (){
+            document.getElementById("out").value=document.getElementById("audi").currentTime },10)
+        
+        function playaudi(){
+            document.getElementById("audi").play();
+        }
+        function pauseaudi(){
+            document.getElementById("audi").pause();
+        }
+        function stopaudi(){
+
+            document.getElementById("audi").currentTime = 0;
+
+           document.getElementById("audi").pause();
+        }   
+        function revindaudi(){
+            document.getElementById("audi").currentTime=document.getElementById("audi").currentTime-0.1;
+            document.getElementById("audi").pause();
+        }
+
+
+      
+
+
+
+
+    </script>
+
+    
+   
+</body>
+</html>

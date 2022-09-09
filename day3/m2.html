@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border:2px solid rgb(red, green, blue);
+            margin: 50px auto;
+            display: block;
+
+        }
+     </style>  
+</head>
+<body>
+    <canvas id="can" width="600" height="600" ></canvas>
+    <script>
+        var ctx=document.getElementById("can").getContext("2d");
+    ctx.beginPath();
+    ctx.strokeStyle="red";
+    ctx.fillStyle="yellow";
+    ctx.moveTo(100,100);
+    ctx.lineTo(200,100);
+    ctx.lineTo(200,200);
+    ctx.lineTo(100,200);
+    ctx.lineTo(100,100);
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.strokeStyle="blue";
+    ctx.fillStyle="grey";
+    ctx.moveTo(300,100);
+    ctx.lineTo(400,100);
+    ctx.lineTo(400,400);
+    ctx.lineTo(100,400);
+    ctx.lineTo(100,100);
+    ctx.fill();
+    ctx.stroke();
+
+    </script>
+
+
+</body>
+</html>

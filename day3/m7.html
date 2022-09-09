@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border:2px solid black;
+            margin: 50px auto;
+            display: block;
+
+        }
+     </style>  
+</head>
+<body>
+    <canvas id="can" width="600" height="600" ></canvas>
+    <script>
+        var ctx=document.getElementById("can").getContext("2d");
+    ctx.beginPath();
+    ctx.strokeStyle="purple";
+    ctx.fillStyle="green";
+    ctx.moveTo(100,300);
+    ctx.lineTo(500,300);
+    //ctx.moveTo(500,300);
+    ctx.lineTo(400,500);
+    //ctx.moveTo(400,500);
+    ctx.lineTo(200,500);
+    //ctx.moveTo(200,500);
+    ctx.lineTo(100,300);
+    ctx.fill();
+    
+    ctx.stroke();
+    ctx.beginPath();
+    //ctx.strokeStyle="blue";
+    ctx.fillStyle="grey";
+   ctx.moveTo(300,300);
+    ctx.lineTo(300,100);
+
+
+   ctx.moveTo(300,100);
+    ctx.lineTo(350,200);
+   // ctx.moveTo(350,150);
+    ctx.lineTo(300,200);
+   ctx.fillStyle="black";
+    ctx.fill();
+    ctx.stroke();
+
+
+    ctx.beginPath();
+    ctx.moveTo(0,500);
+    ctx.lineTo(600,500);
+    ctx.strokeStyle="purple";
+    ctx.fillStyle="green";
+    ctx.stroke();
+    ctx.fill();
+    ctx.close();
+    </script>
+</body>
+</html>

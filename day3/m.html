@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border:2px solid black;
+        }
+     </style>  
+</head>
+<body> 
+    <canvas id="can" width="500" height="500" ></canvas>
+    <script>
+        var can=document.getElementById("can");
+        var ctx=can.getContext("2d");
+        ctx.font="30px arial bold"
+        ctx.fillStyle="orange";
+       // ctx.scale(1,1);
+       // ctx.rotate((Math.PI/180)*5);
+       ctx.translate(15,18);
+        ctx.fillText("Kaise ho Bro  ?? ",150,250);
+        ctx.translate(10,10);
+        ctx.font="30px normal bold"
+        ctx.fillStyle="blue";
+        ctx.fillText("Thik hu bro ",150,300);
+        ctx.translate(10,10);
+        ctx.font="30px normal bold"
+        ctx.fillStyle="green";
+        ctx.fillText("or sb batao ",150,350);
+        
+      
+    </script>
+</body>
+</html>

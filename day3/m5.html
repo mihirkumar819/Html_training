@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border:2px solid greenyellow;
+            margin: 50px auto;
+            display: block;
+
+        }
+     </style>  
+</head>
+<body>
+    <canvas id="can" width="500" height="500" ></canvas>
+    <script>
+
+        var box1=-100;
+        var ctx=document.getElementById("can").getContext("2d");
+        ctx.fillStyle = 'green';
+        setInterval(function(){
+          //  ctx.clearRect(0,0,500,500);
+          ctx.beginPath();
+           var circle1=Math.round(Math.random()*500);
+           var circle2=Math.round(Math.random()*500);
+           var circle3=Math.round(Math.random()*50);
+           var red=Math.round(Math.random()*255);
+           var green=Math.round(Math.random()*255);
+           var blue=Math.round(Math.random()*255);
+           ctx.fillStyle="rgb("+red+","+green+","+blue+")";
+            ctx.arc(circle1,circle2,circle3,25,(Math.PI/180)*360,true);
+            ctx.fill();
+            ctx.closePath();
+
+       // box1+=10;
+    //if(box1 >500){
+        //box1=-100;
+  //  }       
+ },50);
+    </script>
+</body>
+</html>
