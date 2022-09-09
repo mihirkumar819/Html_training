@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <style>
+        canvas{
+            border: 2px black solid;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can" width="900px" height="900px"></canvas>
+    <script>
+        var ctx=document.getElementById("can").getContext("2d");
+        var img1=new Image();
+                img1.src="images/spiderman.jpg";
+                img1.onload=function(){
+                    ctx.rotate((Math.PI/180)*18);
+                    ctx.drawImage(img1,250,-50);
+
+                ctx.beginPath();
+                ctx.strokeStyle="silver";
+                ctx.fillStyle="silver";
+                ctx.moveTo(250,225);
+                ctx.lineTo(550,225);
+                ctx.lineTo(550,300);
+                ctx.lineTo(250,300);
+                ctx.lineTo(250,225);
+                ctx.fill();
+                ctx.stroke();
+
+                ctx.font="bold 30px arial";
+                ctx.fillStyle="black";
+                ctx.fillText("SPIDERMAN",270,270);
+                }
+
+        var img2=new Image();
+                img2.src="images/hulk.jpg";
+                img2.onload=function(){
+                    ctx.drawImage(img2,570,-70);
+
+                ctx.beginPath();
+                ctx.strokeStyle="silver";
+                ctx.fillStyle="silver";
+                ctx.moveTo(570,205);
+                ctx.lineTo(870,205);
+                ctx.lineTo(870,280);
+                ctx.lineTo(570,280);
+                ctx.lineTo(570,205);
+                ctx.fill();
+                ctx.stroke();
+
+                ctx.font="bold 30px arial";
+                ctx.fillStyle="black";
+                ctx.fillText("HULK",600,255);
+                }
+
+         var img2=new Image();
+                img2.src="images/hulk.jpg";
+                img2.onload=function(){
+                    ctx.drawImage(img2,570,-70);
+
+                ctx.beginPath();
+                ctx.strokeStyle="silver";
+                ctx.fillStyle="silver";
+                ctx.moveTo(570,205);
+                ctx.lineTo(870,205);
+                ctx.lineTo(870,280);
+                ctx.lineTo(570,280);
+                ctx.lineTo(570,205);
+                ctx.fill();
+                ctx.stroke();
+
+                ctx.font="bold 30px arial";
+                ctx.fillStyle="black";
+                ctx.fillText("HULK",600,255);
+                }
+
+        var img3=new Image();
+                img3.src="images/blackpanther.jpg";
+                img3.onload=function(){
+                    ctx.drawImage(img3,250,320);
+
+                ctx.beginPath();
+                ctx.strokeStyle="silver";
+                ctx.fillStyle="silver";
+                ctx.moveTo(250,595);
+                ctx.lineTo(550,595);
+                ctx.lineTo(550,670);
+                ctx.lineTo(250,670);
+                ctx.lineTo(250,595);
+                ctx.fill();
+                ctx.stroke();
+
+                ctx.font="bold 30px arial";
+                ctx.fillStyle="black";
+                ctx.fillText("BLACK PANTHER",270,645);
+                }
+
+        var img4=new Image();
+                img4.src="images/thor.jpg";
+                img4.onload=function(){
+                    ctx.drawImage(img4,570,300);
+
+                ctx.beginPath();
+                ctx.strokeStyle="silver";
+                ctx.fillStyle="silver";
+                ctx.moveTo(570,575);
+                ctx.lineTo(870,575);
+                ctx.lineTo(870,650);
+                ctx.lineTo(570,650);
+                ctx.lineTo(570,575);
+                ctx.fill();
+                ctx.stroke();
+
+                ctx.font="bold 30px arial";
+                ctx.fillStyle="black";
+                ctx.fillText("THOR",590,625);
+                }
+    </script>
+</body>
+</html>
